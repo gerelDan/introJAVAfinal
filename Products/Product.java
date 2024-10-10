@@ -23,4 +23,14 @@ public abstract class Product {
     public int hashCode() {
         return Objects.hash(price, manufacturer, id);
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.id +
+                ", Product type: " + this.getClass().getSimpleName() +
+                ", price=" + price +
+                ", name='" + this.name + '\'' +
+                ", manufacturer='" + this.manufacturer + '\'' +
+                '}';
+    }
 }
