@@ -33,4 +33,7 @@ public abstract class Product {
                 ", manufacturer='" + this.manufacturer + '\'' +
                 '}';
     }
+    public String getName(){
+        return this.name;
+    }
 }

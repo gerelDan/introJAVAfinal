@@ -7,14 +7,14 @@ public class Laptop extends Electronics{
     private final int hddValue;
     private final String ramType;
     private final int ramValue;
-    private final Os os;
+    private final String os;
     private final String color;
     private final double diagonal;
     private final String cpu;
 
 
     public Laptop(String hddType, int valueHdd, String ramType,
-                  int ramValue, Os os, String manufacturer,
+                  int ramValue, String os, String manufacturer,
                   double price, String color, double diagonal, String cpu) {
         this.color = color;
         this.diagonal = diagonal;
@@ -32,8 +32,7 @@ public class Laptop extends Electronics{
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "id=" + id +
+        return  "id=" + id +
                 ", hddType='" + hddType + '\'' +
                 ", hddValue=" + hddValue +
                 ", ramType='" + ramType + '\'' +
@@ -44,8 +43,27 @@ public class Laptop extends Electronics{
                 ", cpu='" + cpu + '\'' +
                 ", power=" + power +
                 ", price=" + price +
-                ", name='" + name + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
                 '}';
+    }
+
+    public int getRamValue() {
+        return ramValue;
+    }
+
+    public int getHddValue() {
+        return hddValue;
+    }
+
+    public String getOs() {
+        return os;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getCpu() {
+        return cpu;
     }
 }
